@@ -9,10 +9,7 @@ enum DayOfWeek {
 }
 
 
-const isWeekend = (day:keyof typeof DayOfWeek):boolean => {
-    if(day === 'Saturday' || day === 'Sunday'){
-        return true
-    }
-
-    return false
+const isWeekend = (day:DayOfWeek):boolean => {
+    return day === DayOfWeek.Saturday || day === DayOfWeek.Sunday;
 }
+
